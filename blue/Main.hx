@@ -8,11 +8,11 @@ class Main
     public static function main()
     {
         var data = [
-            Opcode.PUSH, 65,
-            Opcode.PUSH, 82,
-            Opcode.PUSH, 71,
-            Opcode.PRINT, 3,
-            Opcode.HALT,
+            0x00, 65,
+            0x00, 82,
+            0x00, 71,
+            0x11, 3,
+            0x06,
         ];
 
         var vm = new VM();
@@ -20,5 +20,7 @@ class Main
         vm.run();
 
         trace(vm.cpu);
+
+        trace(0x0A);
     }
 }
